@@ -68,6 +68,7 @@ jobs:
       matrix:
         label:
           - CentOS 7
+          - Debian GNU/Linux bullseye
           - AlmaLinux 8
           - AlmaLinux 9
         include:
@@ -76,6 +77,11 @@ jobs:
             task-namespace: yum
             target: centos-7
             test-docker-image: centos:7
+          - label: Debian GNU/Linux bullseye
+            id: debian-bullseye
+            task-namespace: apt
+            target: debian-bullseye
+            test-docker-image: debian:bullseye
           - label: AlmaLinux 8
             id: almalinux-8
             task-namespace: yum
@@ -150,6 +156,7 @@ jobs:
       matrix:
         label:
           - CentOS 7
+          - Debian GNU/Linux bullseye
           - AlmaLinux 8
           - AlmaLinux 9
         include:
@@ -158,6 +165,11 @@ jobs:
             task-namespace: yum
             target: centos-7
             test-docker-image: centos:7
+          - label: Debian GNU/Linux bullseye
+            id: debian-bullseye
+            task-namespace: apt
+            target: debian-bullseye
+            test-docker-image: debian:bullseye
           - label: AlmaLinux 8
             id: almalinux-8
             task-namespace: yum
