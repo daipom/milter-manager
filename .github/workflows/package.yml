@@ -68,7 +68,6 @@ jobs:
       matrix:
         label:
           - CentOS 7
-          - Debian GNU/Linux bullseye
           - AlmaLinux 8
           - AlmaLinux 9
         include:
@@ -156,7 +155,6 @@ jobs:
       matrix:
         label:
           - CentOS 7
-          - Debian GNU/Linux bullseye
           - AlmaLinux 8
           - AlmaLinux 9
         include:
