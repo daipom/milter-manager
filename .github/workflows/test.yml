@@ -23,7 +23,8 @@ jobs:
             curl \
             gtk-doc-tools \
             intltool \
-            lsb-release
+            lsb-release \
+            qemu-user-static
           curl \
             --silent \
             --location \
