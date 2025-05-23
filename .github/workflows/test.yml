@@ -16,6 +16,7 @@ jobs:
           - ubuntu-bionic
           - ubuntu-focal
           - ubuntu-jammy
+          - ubuntu-jammy-arm64
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
