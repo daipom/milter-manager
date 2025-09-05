@@ -24,7 +24,6 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Install dependencies
-        if: ${{ matrix.runs-on == 'ubuntu-latest' }}
         run: |
           sudo apt update
           sudo apt install -y -V \
@@ -36,16 +35,6 @@ jobs:
             --silent \
             --location \
             https://raw.github.com/clear-code/cutter/master/data/travis/setup.sh | sh
-      - name: Install dependencies
-        if: ${{ matrix.runs-on != 'ubuntu-latest' }}
-        run: |
-          sudo apt update
-          sudo apt install -y -V \
-            curl \
-            gtk-doc-tools \
-            intltool \
-            lsb-release \
-            libglib2.0-dev
       - run: ./autogen.sh
       - run: docker compose build ${{ matrix.service }}
       - name: Cache ccache
